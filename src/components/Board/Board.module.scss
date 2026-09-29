@@ -1,0 +1,14 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(var(--cols), 1fr);
+  gap: $space-sm;
+  width: 100%;
+  max-width: $board-max-width;
+
+  @include tablet-up {
+    gap: $space-md;
+  }
+}

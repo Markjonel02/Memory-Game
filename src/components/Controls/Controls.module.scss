@@ -1,0 +1,16 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: $space-md;
+  width: 100%;
+  max-width: $board-max-width;
+}
+
+.restart {
+  @include button-base;
+}

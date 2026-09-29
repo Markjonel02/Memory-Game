@@ -1,0 +1,10 @@
+@use './styles/variables' as *;
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $space-md;
+  padding: $space-md;
+  min-width: 320px;
+}

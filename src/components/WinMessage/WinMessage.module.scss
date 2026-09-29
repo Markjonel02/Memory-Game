@@ -1,0 +1,11 @@
+@use '../../styles/variables' as *;
+
+.message {
+  margin: 0;
+  padding: $space-sm $space-md;
+  background: $color-matched;
+  color: $color-bg;
+  font-weight: 700;
+  text-align: center;
+  border-radius: $radius;
+}

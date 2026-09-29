@@ -1,0 +1,22 @@
+@use '../../styles/variables' as *;
+
+.stats {
+  display: flex;
+  gap: $space-lg;
+  margin: 0;
+}
+
+.item {
+  dt {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: $color-text-muted;
+  }
+
+  dd {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+  }
+}

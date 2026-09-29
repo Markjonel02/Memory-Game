@@ -1,0 +1,25 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: $space-xs;
+}
+
+.label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: $color-text-muted;
+}
+
+.select {
+  font: inherit;
+  color: $color-text;
+  background: $color-surface;
+  border: 1px solid $color-primary;
+  border-radius: $radius;
+  padding: $space-sm;
+
+  @include focus-ring;
+}
