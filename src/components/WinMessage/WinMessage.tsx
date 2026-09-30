@@ -9,7 +9,6 @@ interface WinMessageProps {
   seconds: number;
 }
 
-
 export default function WinMessage({ moves, seconds }: WinMessageProps) {
   const [visible, setVisible] = useState(true);
 
@@ -29,7 +28,7 @@ export default function WinMessage({ moves, seconds }: WinMessageProps) {
 
   return (
     <p className={styles.message} role="status">
-      🎉 You won in {moves} moves and {formatTime(seconds)}!
+      You won in {moves} moves and {formatTime(seconds)}!
     </p>
   );
 }
