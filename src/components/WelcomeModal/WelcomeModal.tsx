@@ -1,4 +1,4 @@
-import styles from "./WelcomeModal.module.scss";
+import styles from "./Welcomemodal.module.scss";
 
 type WelcomeModalProps = {
   onClose: () => void;
