@@ -5,7 +5,7 @@ type WelcomeModalProps = {
 };
 
 
-const VIDEO_PATH = "/how-to-play.mp4";
+const VIDEO_PATH = "/PlayingTip.mp4";
 
 function WelcomeModal({ onClose }: WelcomeModalProps) {
   return (
