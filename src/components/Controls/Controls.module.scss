@@ -5,12 +5,22 @@
   display: flex;
   flex-wrap: wrap;
   align-items: flex-end;
-  justify-content: space-between;
-  gap: $space-md;
+  justify-content: center; // centers Time, Moves, Difficulty and the buttons
+  gap: 12px 24px;
   width: 100%;
-  max-width: $board-max-width;
 }
 
 .restart {
   @include button-base;
+}
+.actions {
+  display: flex;
+  gap: 8px;
+align-items: center;
+  // slightly smaller buttons so everything fits in one row
+  button {
+    padding: 10px 14px;
+    font-size: 14px;
+    white-space: nowrap;
+  }
 }

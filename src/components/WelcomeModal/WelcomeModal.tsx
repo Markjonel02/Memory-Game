@@ -4,7 +4,6 @@ type WelcomeModalProps = {
   onClose: () => void;
 };
 
-
 const VIDEO_PATH = "/PlayingTip.mp4";
 
 function WelcomeModal({ onClose }: WelcomeModalProps) {
@@ -13,14 +12,7 @@ function WelcomeModal({ onClose }: WelcomeModalProps) {
       <div className={styles.modal}>
         <h2 className={styles.title}>Welcome to Memory Game!</h2>
 
-        <video
-          className={styles.video}
-          src={VIDEO_PATH}
-          controls
-          autoPlay
-          muted
-          loop
-        />
+        <video className={styles.video} src={VIDEO_PATH} autoPlay muted loop />
 
         <h3 className={styles.subtitle}>How to play</h3>
         <ol className={styles.list}>
