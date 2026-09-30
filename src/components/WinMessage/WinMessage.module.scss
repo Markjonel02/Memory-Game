@@ -1,11 +1,132 @@
 @use '../../styles/variables' as *;
 
+/* =========================================
+   WIN MESSAGE
+========================================= */
+
 .message {
+  position: fixed;
+
+  top: 20px;
+  right: 20px;
+
+  z-index: 9999;
+
+  width: auto;
+  max-width: 360px;
+
   margin: 0;
-  padding: $space-sm $space-md;
-  background: $color-matched;
-  color: $color-bg;
+  padding: 14px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #e0e7ff;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(79, 70, 229, 0.95),
+      rgba(124, 58, 237, 0.95)
+    );
+
+  border: 1px solid rgba(167, 139, 250, 0.65);
+
+  border-radius: 12px;
+
+  font-size: 0.9rem;
   font-weight: 700;
+
+  line-height: 1.4;
   text-align: center;
-  border-radius: $radius;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.4),
+    0 0 25px rgba(99, 102, 241, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+
+  /*
+    Appears from the right
+  */
+  animation:
+    winMessageIn 0.35s
+      cubic-bezier(0.16, 1, 0.3, 1)
+    forwards;
+
+  /*
+    Small neon line on top
+  */
+  &::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 15%;
+
+    width: 70%;
+    height: 2px;
+
+    background: linear-gradient(
+      90deg,
+      transparent,
+      #a5b4fc,
+      #e9d5ff,
+      #a5b4fc,
+      transparent
+    );
+
+    box-shadow:
+      0 0 8px rgba(165, 180, 252, 0.9);
+
+    border-radius: 50%;
+  }
+}
+
+/* =========================================
+   ENTER ANIMATION
+========================================= */
+
+@keyframes winMessageIn {
+  from {
+    opacity: 0;
+    transform: translateX(30px) scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+  .message {
+    top: 12px;
+    right: 12px;
+    left: 12px;
+
+    width: auto;
+    max-width: none;
+
+    padding: 12px 16px;
+
+    font-size: 0.82rem;
+
+    border-radius: 10px;
+  }
+}
+
+/* =========================================
+   REDUCE MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .message {
+    animation: none;
+  }
 }
