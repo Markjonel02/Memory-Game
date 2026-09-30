@@ -1,6 +1,6 @@
 import { useState } from "react";
 import type { ChangeEvent, FormEvent } from "react";
-import styles from "./NameModal.module.scss";
+import styles from "./Namemodal.module.scss";
 
 type NameModalProps = {
   moves: number;
